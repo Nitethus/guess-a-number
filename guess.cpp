@@ -5,7 +5,7 @@ int main() {
 
     srand (time(NULL));
     int guess;
-    int tries = 0;
+    int tries;
     int secreteNum = rand() % 100 + 1;
 
     std::cout << "******************** Guess number game **************************\n";
@@ -23,11 +23,11 @@ int main() {
         else {
             std::cout << "Congratulation!\n";
             std::cout << "You won! The secrete number was " << secreteNum << '\n';
-            std::cout << "It took you: " << tries << " tries";
+            std::cout << "It took you: " << tries << " tries\n";
         }
         tries++;
     }while(guess != secreteNum);
-    
+    std::cout << "*******************************************************************";
 
     return 0;
 }
